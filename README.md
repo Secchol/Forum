@@ -333,7 +333,5 @@ Authorization: Bearer <token>
   </tr>
 </table>
 
-## App architecture
-
-<img src="architecture2.png">
+![architecture2.png](architecture2.png)
 
