@@ -81,23 +81,7 @@ out/
 *.iml
 *.ipr
 *.iws
-
-##############################
-## Eclipse
-##############################
-.settings/
-bin/
-tmp/
-.metadata
-.classpath
-.project
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.loadpath
-.factorypath
+*.png
 
 ##############################
 ## NetBeans
