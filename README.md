@@ -333,5 +333,5 @@ Authorization: Bearer <token>
   </tr>
 </table>
 
-![architecture2.png](architecture2.png)
+![architecture.png](forum%2Fsrc%2Fmain%2Fresources%2Fstatic%2Farchitecture.png)
 

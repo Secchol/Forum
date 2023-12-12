@@ -2,14 +2,17 @@ package com.ontotext.forum.service;
 
 import com.ontotext.forum.entity.Post;
 import com.ontotext.forum.repository.PostsRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PostService {
-  @Autowired private PostsRepository repository;
+  private final PostsRepository repository;
+
+  public PostService(PostsRepository repository) {
+    this.repository = repository;
+  }
 
   public Post createPost(Post post) {
     return repository.save(post);
@@ -36,7 +39,6 @@ public class PostService {
     Post existingPost = repository.findById(post.getId()).orElse(null);
     existingPost.setTitle(post.getTitle());
     existingPost.setContent(post.getContent());
-    existingPost.setCreationDate(post.getCreationDate());
     return repository.save(existingPost);
   }
 }

@@ -2,7 +2,6 @@ package com.ontotext.forum.controller;
 
 import com.ontotext.forum.entity.Post;
 import com.ontotext.forum.service.PostService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +9,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/posts")
 public class PostController {
-  @Autowired private PostService service;
+  private final PostService service;
+
+  public PostController(PostService postService) {
+    service = postService;
+  }
 
   @PostMapping("/")
   public Post createPost(@RequestBody Post post) {
