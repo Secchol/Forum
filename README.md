@@ -1,3 +1,5 @@
+### The Forum app is a web app where users can create their own posts. Each user is also able to view other posts and write comments on them. Every user profile is public and its details( first and last name,workplace etc.) can be retrieved by others. The purpose of the Forum app is to create a place where anybody can ask and discuss questions with people in their related field of work.
+
 ## Home
 
 ### GET /api/ : Get home page
@@ -299,6 +301,7 @@ Authorization: Bearer <token>
         <li>All User permissions</li>
         <li>Delete or edit any post or comment</li>
         <li>Delete or edit any user account</li>
+      </ul>
   </tr>
   <tr>
     <td>Moderator</td>
@@ -317,6 +320,8 @@ Authorization: Bearer <token>
         <li>Create posts</li>
         <li>Create comments</li>
         <li>Edit own posts and comments</li>
+        <li>View other user profile details</li>
+      </ul>
   </tr>
   <tr>
     <td>Guest</td>
@@ -332,4 +337,3 @@ Authorization: Bearer <token>
 
 <img src="architecture2.png">
 
-### This app follows the basic Spring Boot layered architecture that enables seamless communication between all parts of the app. It implements the client-server model and relies on the embedded Tomcat server while using various parts of the Spring ecosystem.
