@@ -328,8 +328,6 @@ Authorization: Bearer <token>
   </tr>
 </table>
 
-## App architecture
-
-<img src="architecture2.png">
+![architecture2.png](architecture2.png)
 
 ### This app follows the basic Spring Boot layered architecture that enables seamless communication between all parts of the app. It implements the client-server model and relies on the embedded Tomcat server while using various parts of the Spring ecosystem.
