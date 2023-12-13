@@ -1,9 +1,15 @@
 package com.ontotext.forum.entity;
 
-import jakarta.persistence.*;
-import lombok.*;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+/**
+ * The Post class defines a post which has a title, content, creation and edit timestamps.
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -11,8 +17,6 @@ import org.springframework.data.annotation.Id;
 @Entity
 @Table(name = "posts")
 public class Post extends TimestampedEntity {
-  @Id @GeneratedValue private Long id;
-  private String title;
-  private String content;
-
+    private String title;
+    private String content;
 }
